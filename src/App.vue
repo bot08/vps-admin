@@ -1,6 +1,6 @@
 <template>
   <div>
-     <Tabs 
+    <Tabs 
       :tabs="tabs" 
       :currentTab="currentTab"
       @select="currentTab = $event"
@@ -25,7 +25,6 @@ const tabs = [
 ]
 
 const currentTab = shallowRef(tabs[0])
-
 </script>
 
 <style scoped>
