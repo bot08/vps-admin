@@ -8,4 +8,14 @@ export default defineConfig({
     vue(),
     viteSingleFile()
   ],
+  server: {
+    open: true,
+    port: 3000,
+    proxy: {
+      '/api': {
+        target: 'http://192.168.50.224:4321/',
+        changeOrigin: true,
+      },
+    },
+  },
 })

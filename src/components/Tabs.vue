@@ -3,7 +3,7 @@
     <li 
       v-for="tab in tabs" 
       :key="tab.name" 
-      :class="{ active: tab.name === currentTab.name }"
+      :class="{ active: tab.name == currentTab.name }"
       @click="$emit('select', tab)"
     >
       {{ tab.name }}
@@ -28,14 +28,13 @@ const props = defineProps({
   }
 })
 
-const exit = () => {
-  fetch('/', {
+const exit = async () => {
+  await fetch('/', {
     headers: {
       'Authorization': 'Basic logout' 
     }
-  }).finally(() => {
-    window.location.reload()
   })
+  window.location.reload()
 }
 </script>
 

@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onUnmounted } from 'vue'
 
 const stats = ref({
   uptime: 'Loading...',
@@ -42,8 +42,6 @@ const loadStats = async () => {
 }
 
 loadStats()
+let intervalId = setInterval(loadStats, 3000)
+onUnmounted(() => clearInterval(intervalId))
 </script>
-
-<style scoped>
-
-</style>
