@@ -32,7 +32,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup vapor>
 import { ref, onUnmounted } from 'vue'
 
 const containers = ref([])

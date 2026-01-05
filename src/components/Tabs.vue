@@ -14,9 +14,7 @@
   </ul>
 </template>
 
-<script setup>
-import { defineProps } from 'vue'
-
+<script setup vapor>
 const props = defineProps({
   tabs: {
     type: Array,

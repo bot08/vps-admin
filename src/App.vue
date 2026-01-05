@@ -11,7 +11,7 @@
 </div>
 </template>
 
-<script setup>
+<script setup vapor>
 import { shallowRef } from 'vue'
 
 import Tabs from './components/Tabs.vue'
